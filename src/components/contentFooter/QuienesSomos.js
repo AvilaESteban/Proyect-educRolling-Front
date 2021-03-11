@@ -7,6 +7,7 @@ const QuienesSomos = () => {
         <>
             <Header/>
             <h1>QuienesSomos</h1>
+            
             <Footer/>
         </>
     );
