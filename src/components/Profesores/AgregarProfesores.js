@@ -10,7 +10,8 @@ const  AgregarProfesores = () => {
         <>
         <Header/>
         <br></br>
-          <h4>Registrarse para enseñar</h4>
+        <h2 className='text-center'>Crear cuenta</h2>
+          <h4 className='text-center'>Registrarse para enseñar</h4>
           <section className='container text-center'>
          <Form  onSubmit>
           <Form.Group controlId="apellidoNombreId">

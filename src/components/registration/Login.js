@@ -27,17 +27,17 @@ const  Login = () => {
            <NavLink
                    exact={true}
                    to='/recuperar/clave'
-                   className='nav-link text-outline-light '
+                   className='nav-link text-outline-light text-center '
                    activeClassName='active'
-        > Recuperar Clave</NavLink>
+        > Recuperar Contraseña</NavLink>
 
             <br></br>
            <NavLink
                    exact={true}
                    to='/register'
-                   className='nav-link text-outline-light '
+                   className='nav-link text-outline-light text-center'
                    activeClassName='active'
-        > Registrarme</NavLink>
+        >No tienes cuenta? Regístrate</NavLink>
 
         </>
      );
