@@ -33,6 +33,7 @@ import Pasteleria from './components/categories/talleres/Pasteleria';
 import PerfilAlumno from './components/perfil/PerfilAlumno';
 import PerfilProfesor from './components/perfil/PerfilProfesor';
 import RecuperarClave from './components/registration/RecuperarClave';
+import IniciarClase from './components/perfil/IniciarClase';
 
 
 
@@ -111,8 +112,11 @@ function App() {
                  <Route exact={true} path='/perfil/profesor'>
                        <PerfilProfesor/>
                  </Route>
-                 <Route exact={true} path='/perfi/profesor/:id'>
+                 <Route exact={true} path='/perfil/profesor/:id'>
                        <PerfilProfesor/>
+                 </Route>
+                 <Route exact={true} path='/iniciar/clase'>
+                       <IniciarClase/>
                  </Route>
                  <Route exact path='*' > 
                     <Error404/>

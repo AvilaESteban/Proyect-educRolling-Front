@@ -12,20 +12,20 @@ const Footer = () => {
         <NavLink
                    exact={true}
                    to='/quienesSomos'
-                   className='nav-link text-outline-light '
+                   className='nav-link text-light '
                    activeClassName='active'
         > Quiénes Somos?</NavLink>
        
         <NavLink
                    exact={true}
                    to='/terminosCondiciones'
-                   className='nav-link text-outline-light '
+                   className='nav-link text-light '
                    activeClassName='active'
         > Terminos y condiciones</NavLink>
          <NavLink
                    exact={true}
                    to='/dashboard'
-                   className='nav-link text-outline-light '
+                   className='nav-link text-light '
                    activeClassName='active'
         > Dashboard</NavLink>
         </div>

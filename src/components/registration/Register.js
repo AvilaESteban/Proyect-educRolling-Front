@@ -8,7 +8,7 @@ const Register = () => {
            
            <section className='container text-center'>
          <Form  onSubmit>
-            <h2 className='my-4 text-dark text-center' > Registrarse</h2>
+            <h1 className='my-4 text-dark text-center' > Registrarse</h1>
           <Form.Group controlId="apelllidoNombreId">
             <Form.Label>Apellido y nombre </Form.Label>
             <Form.Control type="text" placeholder="Ej: Diaz Maria" onChange />

@@ -7,10 +7,12 @@ const Presentacion = () => {
 
  
     return(
-        <>
-        <h1>Presentación</h1>
 
-        <label>Que es lo que te gustaria aprender ?</label> 
+        <>
+   
+        <h1 >Presentación</h1>
+
+        <label >Que es lo que te gustaria aprender ?</label> 
         <br></br>
         <input
            className='form-group w-50'

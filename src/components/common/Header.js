@@ -1,27 +1,192 @@
 import React, {useState,useRef} from "react";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
-import Dropdown from "react-bootstrap/Dropdown";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Tooltip from "react-bootstrap/Tooltip";
-import Overlay from "react-bootstrap/Overlay";
 
 
 const Header = () => {
-   const [show, setShow] = useState(false);
-   const target = useRef(null);
+
   return (
     <>
-      <Navbar bg="success" variant="" expand="lg" className="">
+
+ <Navbar bg="success" variant="" expand="lg" className="fixed-top">
         <h7 className="text-light">Logo</h7>
         <Navbar.Toggle aria-controls="" />
         <Navbar.Collapse id="">
+           <div className="containerHea green borderXwidth ">
+             <a>
+             <form className="inputbox ">
+              <input className='my-2' placeholder='Buscar' required="required" />
+              <button type="reset" className="del"></button>
+             </form>
+             </a>
+          
+             <a>
+             <NavLink
+              exact={true}
+              to="/inicio"
+            >
+              Inicio
+            </NavLink>
+             </a>
+             <a>
+             <NavLink
+              exact={true}
+              to="/profesor/nuevo"
+            >
+              Registrame para enseñar
+            </NavLink>
+             </a>
+            
+             <a>
+             <li><a className='ak' href="" className='text-light'>Categorias</a>
+		              <ul className=''>
+			            	<li><a className='ak'>Materias</a>
+                  <ul>
+				      	  	<li>
+                      <a className='ak'> 
+                       <NavLink
+                           exact={true}
+                           to="/matematica"
+                         >
+                           Matemática
+                         </NavLink>
+                     </a>
+                    </li>
+				      	  	<li>
+                       <a className='ak'>
+                      <NavLink
+                           exact={true}
+                           to="/lengua"
+                         >
+                            Lengua
+                         </NavLink>
+                       </a>
+                     </li>
+				        	</ul>
+                 </li >
+                 <li><a className='ak'>Taller</a>
+                  <ul>
+				      	  	<li>
+                      <a className='ak'>
+                      <NavLink
+                           exact={true}
+                           to="/pintura"
+                         >
+                             Pintura
+                         </NavLink>
+                       </a>
+                      </li>
+				      	  	<li>
+                      <a className='ak' >
+                       <NavLink
+                           exact={true}
+                           to="/tejidos"
+                         >
+                             Tejidos
+                         </NavLink>
+                      </a>
+                    </li>
+				        	</ul>
+                 </li>
+                 <li><a className='ak'>Cursos</a>
+                  <ul>
+				      	  	<li>
+                      <a className='ak'>
+                      <NavLink
+                           exact={true}
+                           to="/dactilografia"
+                         >
+                            Dactilografia
+                         </NavLink>
+                       </a>
+                      </li>
+				      	  	<li>
+                      <a className='ak' >
+                        <NavLink
+                           exact={true}
+                           to="/auxFarmacia"
+                         >
+                            Aux. Farmacia
+                         </NavLink>
+                      </a>
+                    </li>
+				        	</ul>
+                 </li>
+              	</ul>
+	         		</li>
+             </a>
+             <a>
+             <li><a className='ak' href="" className='text-light'>Registrarme</a>
+		              <ul className=''>
+			            	<li>
+                      <a className='ak'>
+                        <NavLink
+                           exact={true}
+                           to="/login"
+                         >
+                           IniciarSesion
+                         </NavLink>
+                      </a>
+                   </li>
+                 <li>
+                    <a className='ak'>
+                     <NavLink
+                        exact={true}
+                        to="/register"
+                      >
+                        Registro
+                      </NavLink>
+                     </a>
+                 </li>
+              	</ul>
+	         		</li>
+             </a>
+             <a>
+             <li><a className='ak' href="" className='text-light'>Perfil</a>
+		              <ul className=''>
+			            	<li>
+                      <a className='ak'>
+                        <NavLink
+                           exact={true}
+                           to="/perfil/alumno"
+                         >
+                           Alumno
+                         </NavLink>
+                      </a>
+                   </li>
+                 <li>
+                    <a className='ak'>
+                     <NavLink
+                        exact={true}
+                        to="/perfil/profesor"
+                      >
+                        Profesor
+                      </NavLink>
+                     </a>
+                 </li>
+              	</ul>
+	         		</li>
+             </a>
+            
+           </div>
+        </Navbar.Collapse>
+   </Navbar> 
+
+  
+
+
+
+      {/* <Navbar bg="success" variant="" expand="lg" className="p-2">
+        <h7 className="text-light">Logo</h7>
+       
+        <Navbar.Toggle aria-controls="" />
+        <Navbar.Collapse id=""> */}
 
            {/* Boton: Inicio */}
-          <div className="d-flex  ">
+          {/* <div className="d-flex  ">
             <NavLink
               exact={true}
               to="/inicio"
@@ -30,10 +195,10 @@ const Header = () => {
             >
               {" "}
               Inicio
-            </NavLink>
+            </NavLink> */}
 
             {/* Boton: Registrarme para enseñar */}
-            <NavLink
+            {/* <NavLink
               exact={true}
               to="/profesor/nuevo"
               className="nav-link text-light"
@@ -42,9 +207,9 @@ const Header = () => {
               {" "}
               Registrame para enseñar
             </NavLink>
-        
+         */}
         {/* Boton categorias */}
-            <Dropdown>
+            {/* <Dropdown>
               <Dropdown.Toggle variant="success">
                 Que te gustaria aprender?
               </Dropdown.Toggle>
@@ -86,15 +251,10 @@ const Header = () => {
                   </Form.Group>
                 </Button>
               </Dropdown.Menu>
-            </Dropdown>
-        
-    
-           
-            <input></input>
-            <button>Buscar</button>
+            </Dropdown> */}
 
            {/* Boton: Login */}
-             <NavLink
+             {/* <NavLink
              exact={true}
              to="/login"
              className="nav-link text-light"
@@ -102,10 +262,10 @@ const Header = () => {
            >
              {" "}
              Iniciar Sesion
-           </NavLink>
+           </NavLink> */}
 
              {/* Boton: Registrarme */}
-           <NavLink
+           {/* <NavLink
              exact={true}
              to="/register"
              className="nav-link text-light"
@@ -113,13 +273,13 @@ const Header = () => {
            >
              {" "}
              Registrarme
-           </NavLink>
+           </NavLink> */}
             
                 {/* Boton Perfil */}
-     <Button className='bg-success text-light' ref={target} onClick={() => setShow(!show)}>
+     {/* <Button className='bg-success text-light' ref={target} onClick={() => setShow(!show)}>
         Perfil
-      </Button>
-      <Overlay target={target.current} show={show} placement="right">
+      </Button> */}
+      {/* <Overlay target={target.current} show={show} placement="right">
         {(props) => (
           <Tooltip id="overlay-example" {...props}>
                <NavLink
@@ -143,12 +303,15 @@ const Header = () => {
           </Tooltip>
         )}
       </Overlay>
-
-
+ */}
+         {/* <form className="inputbox ">
+          <input className='my-2' required="required" />
+          <button type="reset" className="del"></button>
+        </form>
 
           </div>
         </Navbar.Collapse>
-      </Navbar>
+      </Navbar> */}
     </>
   );
 };

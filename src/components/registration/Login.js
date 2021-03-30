@@ -8,7 +8,7 @@ const  Login = () => {
         <>
         <section className='container text-center'>
             <Form onSubmit>
-            <h2 className='my-4 text-dark text-success' > Iniciar Sesion</h2>
+            <h1 className='my-4 text-dark text-success' > Iniciar Sesion</h1>
           <Form.Group controlId="usuarioId">
             <Form.Label>Usuario</Form.Label>
             <Form.Control type="text" placeholder="Ej: usuario@gmail.com" onChange/>
