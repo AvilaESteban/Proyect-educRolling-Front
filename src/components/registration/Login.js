@@ -6,7 +6,8 @@ import {NavLink } from "react-router-dom";
 const  Login = () => {
     return(
         <>
-        <section className='container text-center'>
+
+       <section className='container text-center'>
             <Form onSubmit>
             <h1 className='my-4 text-dark text-success' > Iniciar Sesion</h1>
           <Form.Group controlId="usuarioId">

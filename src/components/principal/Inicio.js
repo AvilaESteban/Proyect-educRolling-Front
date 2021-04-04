@@ -49,7 +49,7 @@ const Inicio = () => {
 		</div>
 	</div> 
 </body>
-        {/* <Banner/> */}
+      
          
          <Footer/>
         </>

@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <>
 
- <Navbar bg="success" variant="" expand="lg" className="fixed-top">
+ <Navbar bg="success" variant="" expand="lg" className="fixed-top ">
         <h7 className="text-light">Logo</h7>
         <Navbar.Toggle aria-controls="" />
         <Navbar.Collapse id="">
