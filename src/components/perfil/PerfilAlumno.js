@@ -3,9 +3,8 @@ import Footer from '../common/Footer';
 import Header from '../common/Header';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faHandHoldingUsd, faBookReader } from '@fortawesome/free-solid-svg-icons';
-import Form from "react-bootstrap/Form";
-import Button from 'react-bootstrap/Button';
 import Img from '../../asset/img/alumno.jpg';
+import MercadoPago from '../otros/MercadoPago';
 
 const PerfilAlumno = () => {
     return(
@@ -66,38 +65,38 @@ const PerfilAlumno = () => {
                       </div>
                   </div>
                   <br></br>
-                  <h1 className='p-2' >Tus clases</h1>
-                  <div className='d-flex justify-content-around'>
-                      <div className='bg-dark text-light '>
-                        video 1
-                      </div>
-                      <div className='bg-dark text-light '>
-                       video 2
-                      </div>
-                      <div className='bg-dark text-light '>
-                        video 3
-                      </div>
-                  </div>
+                  <h1 className='p-2' >Mis Clases Grabadas</h1>
+                  <table className="table bg-light text-center ">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Link de clase</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <th>10-03-21</th>
+      <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <th> 12-03-21</th>
+      <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+    </tr>
+    <tr>
+    <th scope="row">3</th>
+    <th>15-03-21</th>
+    <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+    </tr>
+  </tbody>
+</table>
+            
                   <br></br>
-                     <div className='d-flex justify-content-center'>
-                     <Form onSubmit>
-                         <h2 className='my-4 text-dark text-success' >Agregar Dinero</h2>
-                       <Form.Group controlId="tarjetaId">
-                         <Form.Label>Tarjeta Crédito</Form.Label>
-                         <Form.Control type="text" placeholder="Ej: Naranja" onChange/>
-                       </Form.Group>
-                       <Form.Group controlId="datosId">
-                         <Form.Label>Datos</Form.Label>
-                         <Form.Control type="text" placeholder="Ej: Descripción del pago" onChange/>
-                       </Form.Group>
-                       <Form.Group controlId="montoId">
-                         <Form.Label>Monto</Form.Label>
-                         <Form.Control type="number" placeholder="Ej: $1000" onChange/>
-                       </Form.Group>
-                       <Button variant="outline-success text-center" className='w-50 my-4' type="submit">
-                         Agregar
-                       </Button>
-                         </Form>
+                     <div className='text-center p-5'>
+                       <MercadoPago/>
+
                      </div>
 
 

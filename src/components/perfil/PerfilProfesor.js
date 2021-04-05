@@ -3,9 +3,6 @@ import Footer from '../common/Footer';
 import Header from '../common/Header';
 import Img from '../../asset/img/Prof1.jpg'
 import { NavLink } from "react-router-dom";
-import Img1 from '../../asset/img/alumno.jpg';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faBookReader} from '@fortawesome/free-solid-svg-icons';
 import Calendar from '../otros/Calendar';
 
 const PerfilProfesor = () => {
@@ -64,107 +61,63 @@ const PerfilProfesor = () => {
                            Iniciar clase
                          </NavLink>
                   </div>
+
+
                   <h1 className='p-2' > Clases Grabadas</h1>
-                  <div className='d-flex justify-content-around'>
-                      <div className='bg-dark text-light '>
-                        video 1
-                      </div>
-                      <div className='bg-dark text-light '>
-                       video 2
-                      </div>
-                      <div className='bg-dark text-light '>
-                        video 3
-                      </div>
-                  </div>
+                  <table className="table bg-light text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Link de clase</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <th>10-03-21</th>
+      <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <th> 12-03-21</th>
+      <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+    </tr>
+    <tr>
+    <th scope="row">3</th>
+    <th>15-03-21</th>
+    <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+    </tr>
+  </tbody>
+</table>
 
-
-                  <h1 className='p-5' >Alumnos</h1>
-                  <div className='text-center d-flex justify-content-around flex-wrap'>
-                      <div >
-                       <aside class="profile-card">
-                        <header>
-                          <img src={Img1} alt='1' className=' w-75'/> 
-                        </header>
-                        <div class="profile-bio">
-                          <h6 className='text-center'>Maria de los Angeles Pérez Diaz</h6>
-                          <h6 className='text-center'>MariaDLAngeles@gmail.com</h6>
-                        </div>
-                        <ul className="profile-social-links">
-                           <li>
-                             <a href="">
-                             <img src={Img} alt='1' className=' '/>
-                             </a>
-                           </li>
-                           <li>
-                             <a href="">
-                             <img src={Img} alt='1' className=' '/>
-                             </a>
-                           </li>
-                           <li>
-                             <a href="">
-                             <img src={Img} alt='1' className=' '/>
-                             </a>
-                            </li>
-                         </ul>
-                     </aside>    
-                 </div>
-                 <div >
-                 <aside class="profile-card">
-                        <header>
-                          <img src={Img1} alt='1' className=' w-75'/>
-                        </header>
-                        <div class="profile-bio">
-                          <h6 className='text-center'>Maria de los Angeles Pérez Diaz</h6>
-                          <h6>MariaDLAngeles@gmail.com</h6>
-                        </div>
-                        <ul className="profile-social-links">
-                           <li>
-                             <a href="">
-                             <img src={Img} alt='1' className=' '/>
-                             </a>
-                           </li>
-                           <li>
-                             <a href="">
-                             <img src={Img} alt='1' className=' '/>
-                             </a>
-                           </li>
-                           <li>
-                             <a href="">
-                             <img src={Img} alt='1' className=' '/>
-                             </a>
-                            </li>
-                         </ul>
-                     </aside> 
-                </div>
-               <div>
-                    <aside class="profile-card">
-                        <header>
-                          <img src={Img1} alt='1' className=' w-75'/>
-                        </header>
-                        <div class="profile-bio">
-                          <h6 className='text-center'>Maria de los Angeles Pérez Diaz</h6>
-                          <h6 className='text-center'>MariaDLAngeles@gmail.com</h6>
-                        </div>
-                        <ul className="profile-social-links">
-                           <li>
-                             <a href="">
-                             <img src={Img} alt='1' className=' '/>
-                             </a>
-                           </li>
-                           <li>
-                             <a href="">
-                             <img src={Img} alt='1' className=' '/>
-                             </a>
-                           </li>
-                           <li>
-                             <a href="">
-                             <img src={Img} alt='1' className=' '/>
-                             </a>
-                            </li>
-                         </ul>
-                     </aside>
-                      </div>
-                  </div>
+                  <h1 className='p-5' >Lista de Alumnos</h1>
+                  <table className="table bg-light text-center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Apellido y nombre</th>
+      <th scope="col">email</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <th>Marcos Luna</th>
+      <th>Mark@gmail.com</th>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <th> Francisco Otto</th>
+      <th>Otto21@gmail.com</th>
+    </tr>
+    <tr>
+    <th scope="row">3</th>
+    <th>Maria Angeles Gimenez</th>
+    <th>@mdo@gmail.com</th>
+    </tr>
+  </tbody>
+</table>
 
                   <h1 className='p-4' >Ajuste</h1>
                   <div  className='text-center'>

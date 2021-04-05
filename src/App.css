@@ -1,7 +1,8 @@
 @media(max-width:560px){
   .containerHea{
     /* display: inline-block; */
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   }
 }
 

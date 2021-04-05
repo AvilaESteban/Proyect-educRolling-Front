@@ -3,18 +3,26 @@ import Aos from 'aos';
 import { Card, Jumbotron } from 'react-bootstrap';
 import '../../App.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBookReader, faChalkboardTeacher, faChevronCircleDown, faLaptopCode} from '@fortawesome/free-solid-svg-icons'
- 
+import {faAngleDoubleDown} from '@fortawesome/free-solid-svg-icons'
+import {animateScroll as scroll} from 'react-scroll';
 
 const CardInformativas = () => {
+
+  const onClickDown = () => {
+		scroll.scrollToBottom();
+	}
+
     return(
         <>
-
+ 
 <div className="dd_heading p-5">
+
 <h1  data-aos="fade-up-right" data-aos-duration="1000" className='text-center'>Aqui Podrás</h1>
 <h3  data-aos="fade-up-right" data-aos-duration="1000" class="text-center"> <strong>Prepararte, Aprender y Estudiar</strong></h3>
 <h3  data-aos="fade-up-right" data-aos-duration="1000" class="text-center">Virtualmente, las 24 hr del dia</h3>
 </div>
+<button onClick={onClickDown}>  <FontAwesomeIcon icon={faAngleDoubleDown}></FontAwesomeIcon></button>
+
 <main className="page-content">
   <div className="d_card">
     <div className="content">

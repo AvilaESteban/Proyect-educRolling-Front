@@ -6,8 +6,16 @@ import Footer from '../common/Footer';
 import CardInformativas from './CardInfomativas';
 import MasSolicitadas from './MasSolicitadas';
 import DisponibleAhora from './DisponibleAhora';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faAngleDoubleUp} from '@fortawesome/free-solid-svg-icons'
+import {animateScroll as scroll} from 'react-scroll';
 
 const Inicio = () => {
+
+	const onClickUp = () => {
+		scroll.scrollToTop();
+	}
+   
     return(
         <>
         <Header/>
@@ -17,6 +25,7 @@ const Inicio = () => {
 		<div className="mainParallax">
 			<section className="contentParallax">
               <CardInformativas/>
+			 
 					<div className="parallax img-uno" id="m">
 						<div className="texto-interior">
 							<h2 id="m">Aqui Se puede escribir algo o no.</h2>
@@ -49,8 +58,7 @@ const Inicio = () => {
 		</div>
 	</div> 
 </body>
-      
-         
+<button onClick={onClickUp}>  <FontAwesomeIcon  icon={faAngleDoubleUp}></FontAwesomeIcon></button>
          <Footer/>
         </>
     );
