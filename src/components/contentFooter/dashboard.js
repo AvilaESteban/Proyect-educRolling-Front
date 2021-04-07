@@ -1,7 +1,7 @@
 import React from 'react';
 import Swal from 'sweetalert2'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faAddressBook, faSplotch, faUserCheck} from '@fortawesome/free-solid-svg-icons';
+import { faAddressBook, faHandHoldingUsd, faUserCheck, faVideo} from '@fortawesome/free-solid-svg-icons';
 import Footer from '../common/Footer';
 import Header from '../common/Header';
 
@@ -59,8 +59,9 @@ const Dashboard = () => {
             <li className='li-dash'><a className='a-dash'  href="#registro/usuario">Registro Usuario   <FontAwesomeIcon className='i' icon={faAddressBook}></FontAwesomeIcon></a></li>
             <li className='li-dash'><a className='a-dash'  href="#registro/profesor">Registro Profesor <FontAwesomeIcon className='i' icon={faAddressBook}></FontAwesomeIcon></a></li>
             <li className='li-dash'><a className='a-dash'  href="#nueva/categoria">Crear Categoria <FontAwesomeIcon className='i' icon={faAddressBook}></FontAwesomeIcon> </a> </li>
-            <li className='li-dash'><a className='a-dash'  href="#registro/pago/alumno">Datos de pago de alumno <FontAwesomeIcon className='i' icon={faAddressBook}></FontAwesomeIcon> </a> </li>
-            <li className='li-dash'><a className='a-dash'  href="#registro/pago/profesor">Datos de pago al profesor <FontAwesomeIcon className='i' icon={faAddressBook}></FontAwesomeIcon> </a> </li>
+            <li className='li-dash'><a className='a-dash'  href="#registro/pago/alumno">Registro pago /alumno <FontAwesomeIcon className='i' icon={faHandHoldingUsd}></FontAwesomeIcon> </a> </li>
+            <li className='li-dash'><a className='a-dash'  href="#registro/pago/profesor">Registro pago /profesor <FontAwesomeIcon icon={faHandHoldingUsd}></FontAwesomeIcon></a> </li>
+            <li className='li-dash'><a className='a-dash'  href="#registro/clases/grabadas">Registro clases grabadas  <FontAwesomeIcon icon={faVideo} ></FontAwesomeIcon></a> </li>
         </ul>
     </nav>
       </div>
@@ -233,13 +234,126 @@ const Dashboard = () => {
            <h1>Nueva Sub-categoria</h1>
          </section>
 {/* ------------------------------------------------------------------------------------------------ */}
-         <section id='registro/pago/alumno' className='bg-light section5 p-5'>
+         <section id='registro/pago/alumno' className='section3 p-5  table-responsive'>
             <h1>Registro de pago del alumno</h1>
+            <h4 className='text-center'>Detalles del comprador y de la tarjeta</h4>
+            <table className='table bg-light'>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Email</th>
+      <th scope="col">Tipo de documento</th>
+      <th scope="col">Nro de documento</th>
+      <th scope="col">Titular tarjeta</th>
+      <th scope="col">Fecha vencimiento</th>
+      <th scope="col">Nro tarjeta</th>
+      <th scope="col">Código seguridad</th>
+      <th scope="col">Banco emisor</th>
+      <th scope='col'>Monto</th>
+      <th scope="col">Cuotas</th>
+      <th scope="col">Eliminar Datos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <th scope="col">maria21@gmail.com</th>
+      <th scope="col">DNI</th>
+      <th scope="col">29875367</th>
+      <th scope="col">Maria Torres</th>
+      <th scope="col">20-01-2029</th>
+      <th scope="col">333-454376633-273</th>
+      <th scope="col">kd!d123/hj$%12hl!</th>
+      <th scope="col">Banco Santander</th>
+      <th scope='col'>$10000</th>
+      <th scope="col">3 cuotas</th>
+      <th scope="col"><button className='btn btn-outline-success'>Eliminar Datos</button></th>
+    </tr>
+    <tr>
+    <th scope="row">2</th>
+      <th scope="col">maria21@gmail.com</th>
+      <th scope="col">DNI</th>
+      <th scope="col">29875367</th>
+      <th scope="col">Maria Torres</th>
+      <th scope="col">20-01-2029</th>
+      <th scope="col">333-454376633-273</th>
+      <th scope="col">kd!d123/hj$%12hl!</th>
+      <th scope="col">Banco Santander</th>
+      <th scope='col'>$10000</th>
+      <th scope="col">3 cuotas</th>
+      <th scope="col"><button className='btn btn-outline-success'>Eliminar Datos</button></th>
+    </tr>
+    <tr>
+    <th scope="row">3</th>
+      <th scope="col">maria21@gmail.com</th>
+      <th scope="col">DNI</th>
+      <th scope="col">29875367</th>
+      <th scope="col">Maria Torres</th>
+      <th scope="col">20-01-2029</th>
+      <th scope="col">333-454376633-273</th>
+      <th scope="col">kd!d123/hj$%12hl!</th>
+      <th scope="col">Banco Santander</th>
+      <th scope='col'>$10000</th>
+      <th scope="col">3 cuotas</th>
+      <th scope="col"><button className='btn btn-outline-success'>Eliminar Datos</button></th>
+    </tr>
+  </tbody>
+</table>
          </section>
  {/* ----------------------------------------------------------------------------------------------------- */}
          <section id='registro/pago/profesor' className='bg-light section6 p-5'>
            <h1>registro de pago al profesor</h1>
          </section>
+       
+{/* -------------------------------------------------------------------------------------------- */}
+         <section id='registro/clases/grabadas' className=' section3 p-5  table-responsive'>
+           <br></br>
+           <h1 className="text-center">Registro de clases grabadas</h1>
+           <br></br>
+      
+  <table className='table bg-light'>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Link</th>
+      <th scope="col">Duración</th>
+      <th scope="col">Profesor</th>
+      <th scope="col">Alumno</th>
+      <th scope="col">Eliminar datos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <th scope='col'>04-04-21</th>
+      <th scope='col'>http://jakdsfjklasjfklsajflksdjsdjlk</th>
+      <th scope='col'>30 minutos</th>
+      <th scope='col'>Julio Diaz</th>
+      <th scope='col'>Maria Martinez</th>
+      <th scope='col'><button className='btn btn-outline-success'>Eliminar</button></th>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <th scope='col'>04-04-21</th>
+      <th scope='col'>http://jakdsfjklasjfklsajflksdjsdjlk</th>
+      <th scope='col'>90 minutos</th>
+      <th scope='col'>Florencia Hills</th>
+      <th scope='col'>Sofia Quinteros</th>
+      <th scope='col'><button className='btn btn-outline-success'>Eliminar</button></th>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <th scope='col'>04-04-21</th>
+      <th scope='col'>http://jakdsfjklasjfklsajflksdjsdjlk</th>
+      <th scope='col'>60 minutos</th>
+      <th scope='col'>Leo Dip</th>
+      <th scope='col'>Mateo Prats</th>
+      <th scope='col'><button className='btn btn-outline-success'>Eliminar</button></th>
+    </tr>
+  </tbody>
+</table>
+          </section>
 
       </div>
     </div>

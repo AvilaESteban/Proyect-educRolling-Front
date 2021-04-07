@@ -70,6 +70,7 @@ const PerfilProfesor = () => {
       <th scope="col">#</th>
       <th scope="col">Fecha</th>
       <th scope="col">Link de clase</th>
+      <th scope='col'>Eliminar clase</th>
       </tr>
   </thead>
   <tbody>
@@ -77,16 +78,19 @@ const PerfilProfesor = () => {
       <th scope="row">1</th>
       <th>10-03-21</th>
       <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+      <th><button className='btn btn-outline-success'>Eliminar</button></th>
     </tr>
     <tr>
       <th scope="row">2</th>
       <th> 12-03-21</th>
       <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+      <th><button className='btn btn-outline-success'>Eliminar</button></th>
     </tr>
     <tr>
     <th scope="row">3</th>
     <th>15-03-21</th>
     <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+    <th><button className='btn btn-outline-success'>Eliminar</button></th>
     </tr>
   </tbody>
 </table>
@@ -98,6 +102,7 @@ const PerfilProfesor = () => {
       <th scope="col">#</th>
       <th scope="col">Apellido y nombre</th>
       <th scope="col">email</th>
+      <th scope='col'>Eliminar</th>
       </tr>
   </thead>
   <tbody>
@@ -105,16 +110,19 @@ const PerfilProfesor = () => {
       <th scope="row">1</th>
       <th>Marcos Luna</th>
       <th>Mark@gmail.com</th>
+      <th><button className='btn btn-outline-success'>Eliminar</button></th>
     </tr>
     <tr>
       <th scope="row">2</th>
       <th> Francisco Otto</th>
       <th>Otto21@gmail.com</th>
+      <th><button className='btn btn-outline-success'>Eliminar</button></th>
     </tr>
     <tr>
     <th scope="row">3</th>
     <th>Maria Angeles Gimenez</th>
     <th>@mdo@gmail.com</th>
+    <th><button className='btn btn-outline-success'>Eliminar</button></th>
     </tr>
   </tbody>
 </table>

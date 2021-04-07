@@ -72,6 +72,7 @@ const PerfilAlumno = () => {
       <th scope="col">#</th>
       <th scope="col">Fecha</th>
       <th scope="col">Link de clase</th>
+      <th scope="col">Eliminar clase</th>
       </tr>
   </thead>
   <tbody>
@@ -79,16 +80,19 @@ const PerfilAlumno = () => {
       <th scope="row">1</th>
       <th>10-03-21</th>
       <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+      <th><button className='btn btn-outline-success'>Eliminar</button></th>
     </tr>
     <tr>
       <th scope="row">2</th>
       <th> 12-03-21</th>
       <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+      <th><button className='btn btn-outline-success'>Eliminar</button></th>
     </tr>
     <tr>
     <th scope="row">3</th>
     <th>15-03-21</th>
     <th>http://lsjdjdfjkjjkdjfjkdfdfklajka</th>
+    <th><button className='btn btn-outline-success'>Eliminar</button></th>
     </tr>
   </tbody>
 </table>

@@ -1374,13 +1374,13 @@ ul {
 }
 
 .social-dash .ul-dash {
-  padding: 5px;
+  /* padding: 10px; */
   transform: translate(-270px,0);
 }
 
 .social-dash .ul-dash .li-dash {
   display: block;
-  margin: 40px;
+  margin: 20px;
   background: rgba(200, 158, 172, 0.5);
   width: 320px;
   text-align: right;
