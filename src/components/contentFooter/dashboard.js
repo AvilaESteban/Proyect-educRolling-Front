@@ -1,51 +1,61 @@
-import React from 'react';
+import React, { useEffect, useState }  from 'react';
 import Swal from 'sweetalert2'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faAddressBook, faHandHoldingUsd, faUserCheck, faVideo} from '@fortawesome/free-solid-svg-icons';
 import Footer from '../common/Footer';
 import Header from '../common/Header';
 
-const Dashboard = () => {
-  
-  Swal.mixin({
-    input: 'text',
-    confirmButtonText: 'Next &rarr;',
-    showCancelButton: true,
-    progressSteps: ['1', '2']
-  }).queue([
-    {
-      title: 'ingrese su contraseña',
-      text: 'Por favor'
-    },
-    'Repita su contraseña',
-  ]).then((result) => {
-    if (result.value === 1234 ) {
-      Swal.fire({
-        title: '  Bienvenido!',
-        html: `
-         Su contraseña es correcta.
-        `,
-        confirmButtonText: 'Ingresar'
-      })
-    }else{
-      Swal.fire({
-        title: ' Acceso Denegado',
-        html: `
-         Su contraseña es Incorrecta.
-        `,
-        confirmButtonText: 'Salir'
-      })
-    }
-  })
 
+const Dashboard = (props) => {
 
+  // -------------------------------------------------------------------------------------------------
+  // condicional swweetalert
+  // Swal.mixin({
+  //   input: 'text',
+  //   confirmButtonText: 'Next &rarr;',
+  //   showCancelButton: true,
+  //   progressSteps: ['1', '2']
+  // }).queue([
+  //   {
+  //     title: 'ingrese su contraseña',
+  //     text: 'Por favor'
+  //   },
+  //   'Repita su contraseña',
+  // ]).then((result) => {
+  //   if (result.value === 12345 ) {
+  //     Swal.fire({
+  //       title: '  Bienvenido!',
+  //       html: `
+  //        Su contraseña es correcta.
+  //       `,
+  //       confirmButtonText: 'Ingresar'
+  //     })
+  //   }else{
+  //     Swal.fire({
+  //       title: ' Acceso Denegado',
+  //       html: `
+  //        Su contraseña es Incorrecta.
+  //       `,
+  //       confirmButtonText: 'Salir'
+  //     })
+  //   }
+  // })
 
+// ------------------------------------------------------------------------------------------------------
+//   condicional ternaria
+// const contraseñaValida = 1234;
+//   const contraseña = prompt('Ingrese su contraseña');
+//   (contraseña === contraseñaValida)? alert('Bienvenido') :  alert('Acceso Denegado');
+
+  // ---------------------------------------------------------------------------------------------------
+    //  condicional  if
       //  const contraseña = prompt('Ingrese su contraseña');
-      //  if(contraseña === '123456'){
+      //  if(contraseña === '1234'){
       //    alert('Bienvenido');
       //  }else{
       //    alert('Acceso Denegado');
       //  }
+       
 
     return(
         <>
@@ -163,13 +173,15 @@ const Dashboard = () => {
            <br></br>
 <table className="table bg-light">
   <thead>
-    <tr>
+    <tr className='bg-dark text-light'>
       <th scope="col">#</th>
       <th scope="col">Apellido-Nombre</th>
       <th scope="col">Descripción</th>
       <th scope="col">Foto</th>
       <th scope="col">Categoria</th>
-      <th scope="col">Sub-Categoria</th>
+      <th scope="col">Sub-Categoria-Materia</th>
+      <th scope="col">Sub-Categoria-Cursos</th>
+      <th scope="col">Sub-Categoria-Taller</th>
       <th scope='col'>Otro</th>
       <th scope='col'> Arancel</th>
       <th scope='col'>Dias</th>
@@ -180,52 +192,28 @@ const Dashboard = () => {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <th scope="col">Gomez Pedro</th>
-      <th scope="col">Soy profesor de matemática con 10 años de trayectoria</th>
-      <th scope="col">Foto</th>
-      <th scope="col">Materia</th>
-      <th scope="col">Matemática</th>
-      <th scope='col'>--</th>
-      <th scope='col'> $200</th>
-      <th scope='col'>Lunes/Miercoles</th>
-      <th scope="col">10am a 12am</th>
-      <th scope='col'>tildado</th>
-      <td scope='col'><button className='btn-outline-success'>Aceptar</button></td>
-      <td scope='col'><button className='btn-outline-success'>Denegar</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <th scope="col">Gomez Pedro</th>
-      <th scope="col">Soy profesor de matemática con 10 años de trayectoria</th>
-      <th scope="col">Foto</th>
-      <th scope="col">Materia</th>
-      <th scope="col">Matemática</th>
-      <th scope='col'>--</th>
-      <th scope='col'> $200</th>
-      <th scope='col'>Lunes/Miercoles</th>
-      <th scope="col">10am a 12am</th>
-      <th scope='col'>tildado</th>
-      <td scope='col'><button className='btn-outline-success'>Aceptar</button></td>
-      <td scope='col'><button className='btn-outline-success'>Denegar</button></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <th scope="col">Gomez Pedro</th>
-      <th scope="col">Soy profesor de matemática con 10 años de trayectoria</th>
-      <th scope="col">Foto</th>
-      <th scope="col">Materia</th>
-      <th scope="col">Matemática</th>
-      <th scope='col'>--</th>
-      <th scope='col'> $200</th>
-      <th scope='col'>Lunes/Miercoles</th>
-      <th scope="col">10am a 12am</th>
-      <th scope='col'>tildado</th>
-      <td scope='col'><button className='btn-outline-success'>Aceptar</button></td>
-      <td scope='col'><button className='btn-outline-success'>Denegar</button></td>
-    </tr>
-  </tbody>
+    {
+       props.profesores.map(item => 
+        <tr >
+        <th scope="row" key={item.id}> {item.id}</th>
+        <th scope="col">{item.apellidoNombre}</th>
+        <th scope="col">{item.descripcion}</th>
+        <th scope="col">{item.foto}</th>
+        <th scope="col">{item.categoria}</th>
+        <th scope="col">{item.subCategoriaMaterias}</th>
+        <th scope="col">{item.subCategoriaCursos}</th>
+        <th scope="col">{item.subCategoriaTalleres}</th>
+        <th scope='col'>{item.otro}</th>
+        <th scope='col'> {item.arancel}</th>
+        <th scope='col'>{item.diasDisponibles}</th>
+        <th scope="col">{item.horariosDisponibles}</th>
+        <th scope='col'>{item.aceptarTerminos}</th>
+        <td scope='col'><button className='btn-outline-success'>Aceptar</button></td>
+        <td scope='col'><button className='btn-outline-success'>Denegar</button></td>
+      </tr>
+        )
+    }
+ </tbody>
 </table>
 </section>
 

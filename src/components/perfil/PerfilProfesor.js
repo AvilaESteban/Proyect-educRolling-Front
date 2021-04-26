@@ -5,27 +5,25 @@ import Img from '../../asset/img/Prof1.jpg'
 import { NavLink } from "react-router-dom";
 import Calendar from '../otros/Calendar';
 
-const PerfilProfesor = () => {
+const PerfilProfesor = (props) => {
     return(
         <>
            <Header/>
   
   <div className='container-profesor  '>
-         
          <div className='row p-5'> 
          <h1 className='p-3'> Perfil</h1>
              <div className='col-xl-4 col-md-6 col-sm-12 '>
              <div class="profile-cart ">
               <div className="images">
-               <h1>Alfonzo Kling</h1>  <img src={Img} alt='1' className='imgProf'/>
-                <h6 className='text-center'>Profesor de Matemática</h6>
+               <h1>{props.profesor.apellidoNombre}</h1>  <img src={props.profesor.foto} alt='1' className='imgProf'/>
+                <h6 className='text-center'>Profesor de {props.profesor.subCategoriaMaterias}</h6>
                    <p  > 
                          <ul>
                          <h1>Datos </h1>
-                          <li ><b>Profesor:</b> Alfonzo Kling</li>
-                          <li><b>categoria:</b> Materias</li>
-                          <li><b>Materia:</b> Matemática</li>
-                          <li><b>arancel 30min:</b> $200</li>
+                          <li><b>categoria:</b> {props.profesor.categoria}</li>
+                          <li><b>Materia:</b> {props.profesor.subCategoriaMaterias}</li>
+                          <li><b>arancel 30min:</b> {props.profesor.arancel}</li>
                           </ul>
                    </p>
                   </div>
@@ -33,13 +31,14 @@ const PerfilProfesor = () => {
              </div>
              <div className='col-xl-8 col-md-6 col-sm-12 shadow p-5 '>
                  <h1 className='p-3 shadow'>Descripción</h1>
-                 <h6 className='p-3'>Me dedico a esta profesión desde hace 20 años, mi paso por diferentes instituciones abalan mi trayectorio. Mi principal objetivo es que el alumno incorpore los conocimientos necesarios de manera didáctica para que su aprendizaje sea mas dinámico y les sirva no sólo para aprobar su materia sino para su vida cotidiana.</h6>
+                 <h6 className='p-3'>{props.profesor.descripcion}</h6>
              </div>
          </div>
   
                   <h1 className='p-5' >Dias de clases</h1>
                   <div className='d-flex justify-content-center'>
                       <div className='border border-success'>
+                          {props.profesor.diasDisponibles}
                           aqui va el calendario con los dias marcados que dicta clases
                           <Calendar/>
                       </div> 
@@ -47,6 +46,7 @@ const PerfilProfesor = () => {
                   <h1 className='p-5' >Horarios</h1>
                   <div className='d-flex justify-content-center'>
                       <div className='border border-success'>
+                         {props.profesor.horariosDisponibles}
                           aqui van los horarios que dicta clases
                       </div> 
                   </div>
@@ -138,4 +138,4 @@ const PerfilProfesor = () => {
     );
 }
 
-export default PerfilProfesor;
+export default  PerfilProfesor;

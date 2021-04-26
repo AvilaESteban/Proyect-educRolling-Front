@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -38,6 +38,25 @@ import IniciarClase from './components/perfil/IniciarClase';
 
 
 function App() {
+      const [profesores, setProfesores] = useState([]);
+
+      useEffect(() => {
+            consultarApi();
+      },[])
+
+      const consultarApi = async() => {
+            try{
+            // hacemos un get
+            const respuesta = await fetch('http://localhost:4000/profesores')
+            console.log(respuesta);
+            const resultado = await respuesta.json();
+            console.log(resultado);
+            setProfesores(resultado);
+            }catch(error){
+                  console.log(error)
+            }
+      }
+
   return (
     <div className="App">
        <Router>
@@ -62,7 +81,9 @@ function App() {
                      <AgregarProfesores/>
                  </Route>
                  <Route exact={true} path='/profesores'>
-                      <ListarProfesores/>
+                      <ListarProfesores
+                           profesores = {profesores}
+                      />
                  </Route>
                  <Route exact={true} path='/profesor/editar/:id'>
                        <EditarProfesores/>
@@ -74,33 +95,37 @@ function App() {
                      <TerminosCondiciones/>
                  </Route>
                  <Route exact={true} path='/dashboard'>
-                       <Dashboard/>
+                       <Dashboard
+                          profesores = {profesores}
+                       />
                  </Route>
-                 <Route exact={true} path='/matematica'>
-                       <Matematica/>
+                 <Route exact={true} path='/profesores/matematica'>
+                       <Matematica
+                          profesores = {profesores}
+                       />
                  </Route>
-                 <Route exact={true} path='/lengua'>
+                 <Route exact={true} path='/profesores/lengua'>
                        <Lengua/>
                  </Route>
-                 <Route exact={true} path='/quimica'>
+                 <Route exact={true} path='/profesores/quimica'>
                        <Quimica/>
                  </Route>
-                 <Route exact={true} path='/auxFarmacia'>
+                 <Route exact={true} path='/profesores/auxFarmacia'>
                        <AuxFarmacia/>
                  </Route>
-                 <Route exact={true} path='/dactilografia'>
+                 <Route exact={true} path='/profesores/dactilografia'>
                        <Dactilografia/>
                  </Route>
-                 <Route exact={true} path='/tejidos'>
+                 <Route exact={true} path='/profesores/tejidos'>
                        <Tejidos/>
                  </Route>
-                 <Route exact={true} path='/pasteleria'>
+                 <Route exact={true} path='/profesores/pasteleria'>
                        <Pasteleria/>
                  </Route>
-                 <Route exact={true} path='/pintura'>
+                 <Route exact={true} path='/profesores/pintura'>
                        <Pintura/>
                  </Route>
-                 <Route exact={true} path='/recursoHumano'>
+                 <Route exact={true} path='/profesores/recursoHumano'>
                        <RecursoHumano/>
                  </Route>
                  <Route exact={true} path='/perfil/alumno'>
@@ -109,11 +134,24 @@ function App() {
                  <Route exact={true} path='/perfil/alumno/:id'>
                        <PerfilAlumno/>
                  </Route>
-                 <Route exact={true} path='/perfil/profesor'>
-                       <PerfilProfesor/>
-                 </Route>
-                 <Route exact={true} path='/perfil/profesor/:id'>
-                       <PerfilProfesor/>
+                 {/* <Route exact={true} path='/perfil/profesor'>
+                       <PerfilProfesor
+                            profesores = {profesores}
+                       />
+                 </Route> */}
+                 <Route exact={true} path='/perfil/profesor/:id' render={(props) =>
+                 { 
+                    const parametro = props.match.params.id  //   parseInt(props.match.params.id)
+                    console.log('parametro',parametro);
+                    const perfilBuscado = profesores.find((item)=>
+                    item.id === parametro);
+                    console.log('perfil Buscado',perfilBuscado)
+                    return  <PerfilProfesor
+                                 profesor={perfilBuscado}
+                             />
+                   }
+                  }>
+                      
                  </Route>
                  <Route exact={true} path='/iniciar/clase'>
                        <IniciarClase/>

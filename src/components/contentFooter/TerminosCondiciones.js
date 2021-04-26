@@ -4,6 +4,7 @@ import { NavLink} from "react-router-dom";
 const TerminosCondiciones = () => {
     return(
         <> 
+    
            <h1>Terminos y condiciones</h1>
 
 
@@ -18,5 +19,6 @@ const TerminosCondiciones = () => {
         </>
     );
 }
+
 
 export default TerminosCondiciones;

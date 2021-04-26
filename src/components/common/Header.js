@@ -18,7 +18,12 @@ const Header = () => {
            <div className="containerHea green borderXwidth ">
              <a>
              <form className="inputbox ">
-              <input className='my-2' placeholder='Buscar' required="required" />
+              <input 
+                 className='my-2' 
+                 placeholder='Buscar' 
+                 required="required" 
+
+                />
               <button type="reset" className="del"></button>
              </form>
              </a>
@@ -31,6 +36,16 @@ const Header = () => {
               Inicio
             </NavLink>
              </a>
+
+             <a>
+             <NavLink
+              exact={true}
+              to="/profesores"
+            >
+              ListadoProfesores
+            </NavLink>
+             </a>
+
              <a>
              <NavLink
               exact={true}
@@ -49,7 +64,7 @@ const Header = () => {
                       <a className='ak'> 
                        <NavLink
                            exact={true}
-                           to="/matematica"
+                           to="/profesores/matematica"
                          >
                            Matemática
                          </NavLink>
@@ -59,7 +74,7 @@ const Header = () => {
                        <a className='ak'>
                       <NavLink
                            exact={true}
-                           to="/lengua"
+                           to="/profesores/lengua"
                          >
                             Lengua
                          </NavLink>
@@ -73,7 +88,7 @@ const Header = () => {
                       <a className='ak'>
                       <NavLink
                            exact={true}
-                           to="/pintura"
+                           to="/profesores/pintura"
                          >
                              Pintura
                          </NavLink>
@@ -83,7 +98,7 @@ const Header = () => {
                       <a className='ak' >
                        <NavLink
                            exact={true}
-                           to="/tejidos"
+                           to="/profesores/tejidos"
                          >
                              Tejidos
                          </NavLink>
@@ -97,7 +112,7 @@ const Header = () => {
                       <a className='ak'>
                       <NavLink
                            exact={true}
-                           to="/dactilografia"
+                           to="/profesores/dactilografia"
                          >
                             Dactilografia
                          </NavLink>
@@ -107,7 +122,7 @@ const Header = () => {
                       <a className='ak' >
                         <NavLink
                            exact={true}
-                           to="/auxFarmacia"
+                           to="/profesores/auxFarmacia"
                          >
                             Aux. Farmacia
                          </NavLink>
@@ -161,7 +176,7 @@ const Header = () => {
                     <a className='ak'>
                      <NavLink
                         exact={true}
-                        to="/perfil/profesor"
+                        to="/perfil/profesor/:id"
                       >
                         Profesor
                       </NavLink>
