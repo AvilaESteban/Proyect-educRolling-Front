@@ -4,7 +4,7 @@ const Calendar = () => {
     return(
         <>
           <h1>calendario</h1>
-          <h1>aqui va el calendario funcional</h1>
+          <h4>Aqui va el calendario funcional</h4>
         </>
     );
 }
