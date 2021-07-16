@@ -1,6 +1,7 @@
 import React from 'react';
-import Footer from '../common/Footer';
-import Header from '../common/Header';
+import Footer from '../../common/Footer';
+import Header from '../../common/Header';
+import './QuienesSomos.css'
 
 const QuienesSomos = () => {
     return(

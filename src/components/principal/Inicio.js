@@ -1,14 +1,15 @@
 import React from 'react';
-import '../../App.css'
+// import '../../App.css'
 import Banner from '../common/Banner';
 import Header from '../common/Header';
 import Footer from '../common/Footer';
-import CardInformativas from './CardInfomativas';
+// import CardInformativas from '../../principal/cardInfo/CardInfomativas';
 import MasSolicitadas from './MasSolicitadas';
 import DisponibleAhora from './DisponibleAhora';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faAngleDoubleUp} from '@fortawesome/free-solid-svg-icons'
 import {animateScroll as scroll} from 'react-scroll';
+import CardInformativas from './cardInfo/CardInfomativas';
 
 const Inicio = () => {
 

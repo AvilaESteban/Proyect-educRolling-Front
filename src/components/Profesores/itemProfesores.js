@@ -7,7 +7,7 @@ const ItemProfesores = (props) => {
     return(
         <>
            
-                      <div className="profile-cart  my-4 shadow">
+                      <div className="profile-cart text-center  my-4 shadow">
                       <div className="images">
                        <h1 className='bg-dark text-light'>{props.profesor.apellidoNombre}</h1>  
                        {/* Aqui  tengo que hacer que se pueda ver en pantalla la imagen */}
@@ -24,8 +24,8 @@ const ItemProfesores = (props) => {
                         {props.profesor.subCategoriaCursos}
                        { props.profesor.subCategoriaTalleres}
                        { props.profesor.otro}
-                           <p> 
-                                 <ul>
+                           <p > 
+                                 <ul >
                                   <li ><b>categoria:</b>{props.profesor.categoria} </li>
                                   <li><b>arancel 30min:</b>$ {props.profesor.arancel}</li>
                                   <li><b>Dias:</b> {props.profesor.diasDisponibles} </li>

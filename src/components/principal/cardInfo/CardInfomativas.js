@@ -1,10 +1,10 @@
 import React from  'react';
 import Aos from 'aos';
 import { Card, Jumbotron } from 'react-bootstrap';
-import '../../App.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faAngleDoubleDown} from '@fortawesome/free-solid-svg-icons'
 import {animateScroll as scroll} from 'react-scroll';
+import './cardInfo.css';
 
 const CardInformativas = () => {
 
@@ -73,6 +73,15 @@ const CardInformativas = () => {
         </>
     );
 }
+
+
+
+
+
+
+
+
+
 
 
 Aos.init({

@@ -14,7 +14,7 @@ const PerfilProfesor = (props) => {
          <div className='row p-5'> 
          <h1 className='p-3'> Perfil</h1>
              <div className='col-xl-4 col-md-6 col-sm-12 '>
-             <div class="profile-cart ">
+             <div class="profile-cart " >
               <div className="images">
                <h1>{props.profesor.apellidoNombre}</h1>  <img src={props.profesor.foto} alt='1' className='imgProf'/>
                 <h6 className='text-center'>Profesor de {props.profesor.subCategoriaMaterias}</h6>
@@ -34,7 +34,7 @@ const PerfilProfesor = (props) => {
                  <h6 className='p-3'>{props.profesor.descripcion}</h6>
              </div>
          </div>
-  
+        
                   <h1 className='p-5' >Dias de clases</h1>
                   <div className='d-flex justify-content-center'>
                       <div className='border border-success'>

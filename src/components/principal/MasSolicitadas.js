@@ -29,7 +29,7 @@ const MasSolicitadas = () => {
               <h4 >Matemática</h4>
               <NavLink
                    exact={true}
-                   to='/matematica'
+                   to='/profesores/matematica'
                    className='nav-link text-outline-light  shadow'
                    activeClassName='active'
         > Ver Profesores</NavLink>
@@ -44,7 +44,7 @@ const MasSolicitadas = () => {
               <h4>Lengua</h4>
               <NavLink
                    exact={true}
-                   to='/lengua'
+                   to='/profesores/lengua'
                    className='nav-link text-outline-light shadow '
                    activeClassName='active'
         > Ver Profesores</NavLink>
@@ -59,7 +59,7 @@ const MasSolicitadas = () => {
               <h4>Quimica</h4>
               <NavLink
                    exact={true}
-                   to='/quimica'
+                   to='/profesores/quimica'
                    className='nav-link text-outline-light shadow'
                    activeClassName='active'
         > Ver Profesores</NavLink>
@@ -81,7 +81,7 @@ const MasSolicitadas = () => {
               <h4>Auxiliar Farmacia</h4>
               <NavLink
                    exact={true}
-                   to='/auxFarmacia'
+                   to='/profesores/auxFarmacia'
                    className='nav-link text-outline-light shadow'
                    activeClassName='active'
         > Ver Profesores</NavLink>
@@ -95,7 +95,7 @@ const MasSolicitadas = () => {
               <h4>Dactilografia</h4>
               <NavLink
                    exact={true}
-                   to='/dactilografia'
+                   to='/profesores/dactilografia'
                    className='nav-link text-outline-light shadow'
                    activeClassName='active'
         > Ver Profesores</NavLink>
@@ -109,7 +109,7 @@ const MasSolicitadas = () => {
               <h4>Recursos Humanos</h4>
               <NavLink
                    exact={true}
-                   to='/recursoHumano'
+                   to='/profesores/recursoHumano'
                    className='nav-link text-outline-light shadow'
                    activeClassName='active'
         > Ver Profesores</NavLink>
@@ -131,7 +131,7 @@ const MasSolicitadas = () => {
               <h4>Pintura</h4>
               <NavLink
                    exact={true}
-                   to='/pintura'
+                   to='/profesores/pintura'
                    className='nav-link text-outline-light shadow'
                    activeClassName='active'
         > Ver Profesores</NavLink>
@@ -145,7 +145,7 @@ const MasSolicitadas = () => {
               <h4>Tejidos y Bordados</h4>
               <NavLink
                    exact={true}
-                   to='/tejidos'
+                   to='/profesores/tejidos'
                    className='nav-link text-outline-light shadow'
                    activeClassName='active'
         > Ver Profesores</NavLink>
@@ -159,7 +159,7 @@ const MasSolicitadas = () => {
               <h4>Pasteleria</h4>
               <NavLink
                    exact={true}
-                   to='/pasteleria'
+                   to='/profesores/pasteleria'
                    className='nav-link text-outline-light shadow'
                    activeClassName='active'
         > Ver Profesores</NavLink>

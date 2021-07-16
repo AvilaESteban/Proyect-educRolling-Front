@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
+import { LoginAuth0 } from "../registration/Login/login-con-auth0/LoginAuth0";
 
 
 const Header = () => {
@@ -156,6 +157,19 @@ const Header = () => {
                       </NavLink>
                      </a>
                  </li>
+                 {/* ---------------------------
+                 usando Auth0 para login */}
+                 {/* <li>
+                    <a className='ak'>
+                     <NavLink
+                        exact={true}
+                        to="/loginAuth0"
+                      >
+                        LoginAuth0
+                      </NavLink>
+                     </a>
+                 </li> */}
+                 {/* --------------------------- */}
               	</ul>
 	         		</li>
              </a>

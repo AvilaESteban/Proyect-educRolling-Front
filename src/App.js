@@ -7,10 +7,10 @@ import {
   Link
 } from "react-router-dom";
 
-import Presentacion from './components/principal/Presentacion';
-import Login from './components/registration/Login';
-import Register from './components/registration/Register';
-import AgregarProfesores from './components/Profesores/AgregarProfesores';
+import Presentacion from './components/principal/presentacion/Presentacion';
+import Login from './components/registration/Login/Login';
+import Register from './components/registration/register/Register';
+import AgregarProfesores from './components/Profesores/agregarProf/AgregarProfesores';
 import Inicio from './components/principal/Inicio';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
@@ -18,7 +18,6 @@ import Banner from './components/common/Banner';
 import ListarProfesores from './components/Profesores/ListarProfesores';
 import EditarProfesores from './components/Profesores/EditarProfesores';
 import Error404 from './components/error404/Error';
-import QuienesSomos from './components/contentFooter/QuienesSomos';
 import TerminosCondiciones from './components/contentFooter/TerminosCondiciones';
 import Dashboard from './components/contentFooter/dashboard';
 import Matematica from './components/categories/materias/Matematica';
@@ -32,8 +31,10 @@ import Tejidos from './components/categories/talleres/Tejidos';
 import Pasteleria from './components/categories/talleres/Pasteleria';
 import PerfilAlumno from './components/perfil/PerfilAlumno';
 import PerfilProfesor from './components/perfil/PerfilProfesor';
-import RecuperarClave from './components/registration/RecuperarClave';
+import RecuperarClave from './components/registration/recuperarClave/RecuperarClave';
 import IniciarClase from './components/perfil/IniciarClase';
+import QuienesSomos from './components/contentFooter/quienesSomos/QuienesSomos';
+import { LoginAuth0 } from './components/registration/Login/login-con-auth0/LoginAuth0';
 
 
 
@@ -68,6 +69,12 @@ function App() {
                 <Route  exact={true} path='/inicio'>
                     <Inicio/>
                 </Route>
+                {/* ----------------------------
+                usando Auth0 para login */}
+                {/* <Route  exact={true} path='/loginAuth0'>
+                    <LoginAuth0/>
+                </Route> */}
+                {/* --------------------------- */}
                 <Route  exact={true} path='/login'>
                     <Login/>
                 </Route>
